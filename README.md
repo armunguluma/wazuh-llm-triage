@@ -101,3 +101,4 @@ All settings are environment variables (see [`.env.example`](.env.example)).
 ## License
 
 MIT. See [LICENSE](LICENSE).
+# wazuh-llm-triage
