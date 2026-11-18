@@ -1,0 +1,131 @@
+WAZUH SOC INCIDENT | LEVEL 12 | SSH brute force | 203.0.113.9
+
+================================================
+WAZUH SECURITY OPERATIONS CENTER
+================================================
+
+SECURITY INCIDENT
+
+
+Severity Level:
+12
+
+Rule ID:
+5712
+
+Detection:
+SSH brute force
+
+
+================================================
+INCIDENT SUMMARY
+================================================
+
+Occurrences:
+1
+
+First Seen:
+2026-11-18T10:00:00
+
+Last Seen:
+2026-11-18T10:00:00
+
+Source IP:
+203.0.113.9
+
+Source Location:
+GeoIP disabled
+
+
+================================================
+AFFECTED HOST
+================================================
+
+Host:
+web01
+
+Host IP:
+10.0.0.5
+
+
+
+================================================
+AI SOC ANALYSIS (advisory only, verify before acting)
+================================================
+
+SUMMARY
+
+Repeated failed SSH logins for root from 203.0.113.9.
+
+
+OBSERVED ACTIVITY
+
+2 failed password attempts
+
+
+THREAT ASSESSMENT
+
+Likely brute-force attempt
+
+
+AI SEVERITY
+
+HIGH
+
+
+AI CONFIDENCE
+
+80%
+
+
+MITRE ATT&CK
+
+Technique:
+T1110
+
+Name:
+Brute Force
+
+
+RECOMMENDED INVESTIGATION
+
+1. Check auth.log for successful logins from 203.0.113.9
+
+
+RECOMMENDED RESPONSE
+
+1. Block 203.0.113.9 at the firewall
+
+
+================================================
+
+
+
+================================================
+RELATED WAZUH EVENTS
+================================================
+
+
+EVENT 1
+
+Timestamp:
+2026-11-18T10:00:00
+
+Rule ID:
+5712
+
+Level:
+12
+
+Description:
+SSH brute force
+
+Full Log:
+Failed password for root from 203.0.113.9 port 22
+
+
+
+================================================
+END SOC INCIDENT
+================================================
+

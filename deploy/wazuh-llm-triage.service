@@ -1,0 +1,22 @@
+[Unit]
+Description=Wazuh LLM alert triage
+After=network-online.target wazuh-manager.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=wazuh-triage
+# The wazuh group can read /var/ossec/logs/alerts/alerts.json
+Group=wazuh
+EnvironmentFile=/etc/wazuh-llm-triage.env
+ExecStart=/usr/bin/python3 /opt/wazuh-llm-triage/wazuh_llm_triage.py
+LogsDirectory=wazuh-llm-triage
+Restart=always
+RestartSec=10
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,6 @@
+# Real settings and secrets: never commit
+.env
+*.env
+!.env.example
+*.log
+__pycache__/
